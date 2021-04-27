@@ -1,5 +1,5 @@
 <div class="body">
-  <div class="user-profile">
+  <mat-dialog-content class="user-profile">
     <mat-card class="profile-info">
       <mat-card-header>
         <mat-card-title class="your-info"> Your Profile Info: </mat-card-title>
@@ -9,7 +9,7 @@
       <mat-card-content> Password: ******** </mat-card-content>
       <mat-card-content> Email: {{data.Email}} </mat-card-content>
       <mat-card-content>
-        Birthday: {{data.Birthday}}
+        Birthday: {{data.Birthday | date: "MM/dd/yyyy":"UTC" }}
       </mat-card-content>
       <mat-card-actions>
         <div class="profile-buttons">
@@ -32,9 +32,9 @@
         </div>
       </mat-card-actions>
     </mat-card>
-  </div>
+  </mat-dialog-content>
 
-  <div class="favorites-container">
+  <mat-dialog-content class="favorites-container">
     <!-- <mat-card-content> -->
     <div class="title-container">
       <mat-card-title class="title">Your Favorite Movies:</mat-card-title>
@@ -46,19 +46,21 @@
         <div class="favorite-title">
           <mat-card-title>{{ favorite.Title }}</mat-card-title>
         </div>
+        <br><br>
         <div class="remove-favorite">
           <!-- <mat-card-actions> -->
           <button
             class="remove-button"
-            mat-button
-            color="basic"
+            mat-raised-button
+            color="primary"
             (click)="removeFromFavorites(favorite._id, favorite.Title)"
           >
             Remove From favorites
           </button>
           <!-- </mat-card-actions> -->
         </div>
+        <br><br>
       </mat-card>
     </div>
-  </div>
+  </mat-dialog-content>
 </div>
