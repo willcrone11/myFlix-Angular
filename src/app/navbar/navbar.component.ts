@@ -23,6 +23,9 @@ export class NavbarComponent implements OnInit {
     this.getUser();
   }
 
+  /**
+   * @returns navbar logout function
+   */
   logoutUser(): void {
     localStorage.clear();
     this.router.navigate(['welcome']);
@@ -31,6 +34,14 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  /**
+   * shows profile dialog on button press
+   * 
+   * @param Username 
+   * @param Password 
+   * @param Email 
+   * @param Birthday 
+   */
   showProfileDialog(
     Username: string,
     Password: string,
@@ -43,6 +54,9 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  /**
+   * gets user data to be shown in profile dialog
+   */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
         this.userData = resp;

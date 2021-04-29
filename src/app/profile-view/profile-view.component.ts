@@ -46,11 +46,17 @@ export class ProfileViewComponent implements OnInit {
     }
   ) {}
 
+  /**
+   * gets user favorites and user data on init
+   */
   ngOnInit(): void {
     this.getFavoriteMovies();
     this.getUser();
   }
 
+  /**
+   * gets data for all movies
+   */
   getMovies(): void {
     this.fetchApiDataAllMovies.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -62,6 +68,9 @@ export class ProfileViewComponent implements OnInit {
     });
   }
 
+  /**
+   * gets user data 
+   */
   getUser(): void {
     this.fetchApiDataUser.getUser().subscribe((resp: any) => {
         this.userData = resp;
@@ -195,6 +204,9 @@ export class ProfileViewComponent implements OnInit {
   }
 
 
+  /**
+   * function to remove user favorites
+   */
   removeFromFavorites(id: string, title: string): void {
     this.fetchApiDataDeleteFavorite.deleteFavoriteMovie(id).subscribe(() => {
       this.snackbar.open(
@@ -210,6 +222,9 @@ export class ProfileViewComponent implements OnInit {
     });
   }
 
+  /**
+   * function to display profile update dialog
+   */
   profileUpdateDialog(): void {
     this.dialog.open(ProfileUpdateComponent, {
       width: '280px',

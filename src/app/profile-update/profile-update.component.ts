@@ -20,6 +20,9 @@ export class ProfileUpdateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * function to update/edit user data
+   */
   editUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe(
       (response) => {
