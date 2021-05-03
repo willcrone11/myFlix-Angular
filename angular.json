@@ -30,7 +30,8 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "allowedCommonJsDependencies": [
-              "lodash"
+              "lodash",
+              "rxjs/internal/operators"
             ],
             "assets": [
               "src/favicon.ico",
@@ -59,7 +60,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "1000kb",
                   "maximumError": "1mb"
                 },
                 {
