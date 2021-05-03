@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<div >
-  <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
+<div class="movie-card">
+  <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;" class="card">
       <mat-card-header>
       <mat-card-title>{{movie.Title}}</mat-card-title>
           <mat-card-subtitle>Director: {{movie.Director.Name}}</mat-card-subtitle>

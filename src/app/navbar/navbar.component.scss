@@ -1,31 +1,30 @@
 #navbar {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  background-color: #ffffff;
+  padding: 10px;
   width: 100%;
-  background-color: #b6b7b8;
-}
-
-.nav-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 12px;
-}
-
-.app-title {
-  font-size: 22px;
-  margin-left: 30px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  z-index: 2;
 }
 
 button {
   font-size: 17px;
-  font-family: "Michroma", sans-serif;
-  letter-spacing: 1px;
   color: black;
+  margin: 5px;
+}
+
+#site-button {
+  font-size: 20px;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+.nav-container {
+  display: flex;
 }
 
 .nav-links {
-  margin-right: 35px;
+  position: absolute;
+  right: 20px;
 }

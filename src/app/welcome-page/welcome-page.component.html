@@ -1,11 +1,15 @@
-<div class="main-page">
-  <h1>
-    Welcome to myFlix!
-  </h1>
+<div class="welcome-container">
+<div class="text-container">
+  <div class="main-page">
+    <h1 class="header">
+      Welcome to Star Wars Central!
+    </h1>
+  </div>
+
+<div class="button-container">
   <button
     mat-raised-button
     (click)="openUserRegistrationDialog()"
-    style="margin-right: 10px;"
     color="primary"
   >
     Sign Up
@@ -14,8 +18,9 @@
     mat-raised-button
     color="primary"
     (click)="openUserLoginDialog()"
-    style="margin-right: 10px;"
   >
     Login
   </button>
+</div>
+</div>
 </div>

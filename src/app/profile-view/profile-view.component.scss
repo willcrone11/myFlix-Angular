@@ -1,0 +1,16 @@
+.profile-buttons {
+  display: flex;
+}
+
+button {
+  width: 200px;
+  text-align: center;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+.remove-favorite {
+  margin-bottom: 30px;
+}

@@ -1,11 +1,11 @@
 <div id="navbar">
   <div class="nav-container">
-    <button mat-button color="primary" routerLink="/movies" class="app-title">
+    <button mat-button routerLink="/movies" class="app-title" id="site-button">
       Star Wars Central
     </button>
     <div class="nav-links">
       <button
-              mat-button
+              mat-raised-button
               color="primary"
               (click)="
             showProfileDialog(
@@ -17,7 +17,7 @@
           >
               Profile
           </button>
-      <button mat-button color="basic" class="logout" (click)="logoutUser()">
+      <button mat-raised-button color="basic" class="logout" (click)="logoutUser()">
         Logout
       </button>
     </div>

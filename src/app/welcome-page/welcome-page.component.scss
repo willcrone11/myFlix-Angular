@@ -1,0 +1,44 @@
+.main-page {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.header {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+button {
+  width: 200px;
+  margin: 10px;
+}
+
+.welcome-container {
+  background-image: url("../../assets/skywalker.jpeg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  padding: 20%;
+}
+
+.text-container {
+  background-color: white;
+  opacity: .9;
+  padding: 20px;
+}
