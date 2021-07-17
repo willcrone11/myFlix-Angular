@@ -7,5 +7,27 @@
 }
 
 .card {
-  margin: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .card {
+    margin-top: 30%;
+  }
 }
